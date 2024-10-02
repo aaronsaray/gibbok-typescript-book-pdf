@@ -1,17 +1,19 @@
 <?php
 
+require_once 'Observer.php';
+
 return [
     'theme' => 'my-theme',
     'content' => '/typescript-book-content',
 
     'title' => 'The Concise TypeScript Book',
-    'author' => 'Gibbok',
+    'author' => 'Simone Poggiali',
 
-    'toc-enabled' => true,
+    'toc-enabled' => false,
     'toc-links' => true,
-    'toc-header' => 'Contents',
+    'toc-header' => 'Table of Contents Header',
 
-    'footer' => 'Page {PAGENO}',
+    'footer' => '',
 
     'markdown-extensions' => ['md'],
 
@@ -19,8 +21,7 @@ return [
 
     'observers' => [
         new \Typesetterio\Typesetter\Observers\DefaultMarkdownConfiguration(),
-        new \Typesetterio\Typesetter\Observers\FirstElementInChapterCSSClass(),
-        new \Typesetterio\Typesetter\Observers\BreakToPageBreak(),
         new \Typesetterio\Typesetter\Observers\Credits(),
+        new Observer(),
     ],
 ];
