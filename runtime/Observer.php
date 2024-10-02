@@ -9,7 +9,7 @@ class Observer extends Typesetterio\Typesetter\Observers\Observer
     <table>
         <tr>
             <td>
-                The Concise Typescript Book
+                The Concise TypeScript Book
             </td>
             <td>
                 Page {PAGENO}
