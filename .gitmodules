@@ -1,0 +1,3 @@
+[submodule "typescript-book"]
+	path = typescript-book
+	url = https://github.com/gibbok/typescript-book
